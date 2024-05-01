@@ -9,9 +9,11 @@ app.use(express.json());
 
 app.use("/api/blogs", blogRouter);
 app.use("/", (req, res) => {
-  res.send("heoo");
+  res.send("hello");
 });
 
 app.listen("5000", () => {
   console.log("app is running");
 });
+
+module.exports = app;
