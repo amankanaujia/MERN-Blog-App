@@ -12,7 +12,9 @@ const Home = () => {
   // fetch blogs
   const fetchListOfBlogs = async () => {
     setPending(true);
-    const response = await axios.get("http://localhost:5000/api/blogs");
+    const response = await axios.get(
+      "https://mern-blog-app-ten.vercel.app/api/blogs"
+    );
     const result = await response.data;
 
     if (result && result.blogList && result.blogList.length) {
