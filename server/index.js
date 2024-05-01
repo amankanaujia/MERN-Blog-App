@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api/blogs", blogRouter);
-app.use("https://mern-blog-app-ten.vercel.app", (req, res) => {
+app.use("/", (req, res) => {
   res.send("heoo");
 });
 

@@ -30,7 +30,7 @@ const Home = () => {
   const handleDeleteBlog = async (getCurrentId) => {
     console.log(getCurrentId);
     const response = await axios.delete(
-      `http://localhost:5000/api/blogs/delete/${getCurrentId}`
+      `https://mern-blog-app-ten.vercel.app/api/blogs/delete/${getCurrentId}`
     );
     const result = await response.data;
     if (result.message) {
