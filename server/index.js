@@ -6,7 +6,7 @@ const blogRouter = require("./route/blog-route.js");
 const app = express();
 app.use(
   cors({
-    origin: [`https://mern-blog-app-eight.vercel.app`],
+    origin: [`https://mern-blog-app-rosy.vercel.app`],
     methods: ["POST", "GET", "UPDATE", "DELETE"],
     credentials: true,
   })

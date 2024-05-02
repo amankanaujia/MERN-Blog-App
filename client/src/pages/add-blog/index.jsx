@@ -13,16 +13,19 @@ const Addblog = () => {
     setIsEdit(false);
     const response = isEdit
       ? await axios.put(
-          `https://mern-blog-app-ten.vercel.app/api/blogs/update/${location.state.getCurrentBlog._id}`,
+          `https://mern-blog-app-api-ashy.vercel.app/api/blogs/update/${location.state.getCurrentBlog._id}`,
           {
             title: formData.title,
             description: formData.description,
           }
         )
-      : await axios.post("https://mern-blog-app-ten.vercel.app/api/blogs/add", {
-          title: formData.title,
-          description: formData.description,
-        });
+      : await axios.post(
+          "https://mern-blog-app-api-ashy.vercel.app/api/blogs/add",
+          {
+            title: formData.title,
+            description: formData.description,
+          }
+        );
     const result = await response.data;
     console.log(result);
 

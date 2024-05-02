@@ -13,7 +13,7 @@ const Home = () => {
   const fetchListOfBlogs = async () => {
     setPending(true);
     const response = await axios.get(
-      "https://mern-blog-app-ten.vercel.app/api/blogs"
+      "https://mern-blog-app-api-ashy.vercel.app/api/blogs"
     );
     const result = await response.data;
 
@@ -30,7 +30,7 @@ const Home = () => {
   const handleDeleteBlog = async (getCurrentId) => {
     console.log(getCurrentId);
     const response = await axios.delete(
-      `https://mern-blog-app-ten.vercel.app/api/blogs/delete/${getCurrentId}`
+      `https://mern-blog-app-api-ashy.vercel.app/api/blogs/delete/${getCurrentId}`
     );
     const result = await response.data;
     if (result.message) {
